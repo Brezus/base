@@ -1,33 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script src="/src/index.js"></script>
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(227, 21%, 21%);
+      }
+    </style>
+  </head>
+  <body>
+   <div class="content-wrapper hero">
+    <header>
+      <figure class="logo">
+        <div class="logo-cont">
+          <img class="logo-img" src="/images/logo.svg" alt="" />
+        </div>
+        <div class="hero-img-cont">
+          <img class="hero-img-mobile" src="/images/hero-mobile.jpg" alt="" />
+        </div>
+      </figure>
   
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+      <div class="hero-content">
+        <main class="hero-section">
+          <h1 class="hero__h1">
+            We're <span class="big--black">coming</span>
+            <span class="big--black">soon</span>
+          </h1>
+          <p class="hero__p">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our
+            launch deals.
+          </p>
+    
+          <form class="email-form" id="email-form">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+            />
+            <button type="submit">
+              <img class="red-button btn" src="/images/icon-arrow.svg" alt="" />
+            </button>
+            <img class="error-icon hidden" src="/images/icon-error.svg" alt="" />
+            <small class="error-text">Please provide a valid email</small>
+          </form>
+        </main>
+      </div>
+     </header>
+     
+        <aside>
+          <img class="img-desktop" src="/images/hero-desktop.jpg" alt="" />
+        </aside>
+      </div>
+   </div>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+  </body>
 </html>

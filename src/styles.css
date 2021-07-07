@@ -1,0 +1,250 @@
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --Gradient: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+  --Gradient-color: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+  --ff: "Josefin Sans", sans-serif;
+  --ff-weight-s: 300;
+  --ff-weight-m: 400;
+  --ff-weight-l: 600;
+  --opacity: 0.9;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* end of modern css resets */
+body {
+  font-size: 1rem;
+  font-family: var(--ff);
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%),
+    hsla(0, 80%, 86%, 0.094),
+    hsla(0, 74%, 74%, 0.026)
+  );
+  color: var(--Desaturated-Red);
+  text-align: center;
+  height: 100vh;
+}
+.logo-cont {
+  display: flex;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+.logo-img {
+  width: 25%;
+}
+
+.hero-img-mobile {
+  object-fit: contain;
+  width: 100%;
+}
+
+main {
+  padding: 0 2rem;
+}
+main h1 {
+  padding: 3.1rem 0 1rem;
+  line-height: 1;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  font-weight: var(--ff-weight-s);
+  opacity: var(--opacity);
+}
+.big--black {
+  color: var(--Dark-Grayish-Red);
+  display: block;
+  font-weight: var(--ff-weight-l);
+}
+main p {
+  opacity: var(--opacity);
+}
+input {
+  border: 1px solid var(--Desaturated-Red);
+  width: 100%;
+  border-radius: 30px;
+  padding: 0.6rem 1.5rem;
+  margin: 1.5rem auto 0;
+  background-image: linear-gradient(var(--Gradient));
+}
+input:focus {
+  outline: none;
+}
+::placeholder {
+  color: var(--Desaturated-Red);
+}
+.hidden {
+  display: none;
+}
+.email-form {
+  position: relative;
+}
+button {
+  padding: 0.8rem 1.5rem;
+  background-image: linear-gradient(
+    to right,
+    hsla(0, 80%, 86%),
+    hsla(0, 74%, 74%)
+  );
+  border: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 0%;
+  border-radius: 30px;
+  box-shadow: 0px 10px 10px hsla(0, 36%, 70%, 0.411);
+  cursor: pointer;
+}
+footer {
+  margin-top: 6rem;
+}
+.img-desktop {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1rem;
+    font-family: var(--ff);
+    background-image: linear-gradient(
+        135deg,
+        hsl(0, 0%, 100%),
+        hsl(0, 100%, 98%),
+        hsla(0, 80%, 86%, 0.094),
+        hsla(0, 74%, 74%, 0.026)
+      ),
+      url(/images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--Desaturated-Red);
+    text-align: left;
+    overflow-y: hidden;
+  }
+  header {
+    padding: 0 3rem;
+    width: 70%;
+    margin-left: -10rem;
+  }
+  .hero__h1 {
+    font-size: 3.3rem;
+  }
+  .logo-cont {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1.5rem;
+  }
+  .logo-img {
+    width: 25%;
+  }
+
+  .hero-img-mobile {
+    object-fit: contain;
+    width: 100%;
+  }
+
+  main {
+    padding: 0 2rem;
+  }
+  main h1 {
+    padding: 3.3rem 0 1.3rem;
+  }
+  .hero-img-mobile {
+    display: none;
+  }
+  .img-desktop {
+    display: initial;
+  }
+  .content-wrapper.hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    height: 100%;
+  }
+
+  aside img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  footer {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    right: 75%;
+  }
+  .hidden {
+    display: none;
+  }
+}
