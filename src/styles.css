@@ -248,6 +248,7 @@ footer {
   footer {
     margin-top: 0;
     grid-area: foot;
+    padding-top: 1rem;
   }
   aside {
     grid-area: img;
