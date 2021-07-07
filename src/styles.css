@@ -229,19 +229,28 @@ footer {
     background-size: cover;
     color: var(--Desaturated-Red);
     text-align: left;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
   }
   .hero {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "text img"
+      "foot img";
     justify-items: center;
     height: 100%;
   }
+  .hero-content {
+    grid-area: text;
+  }
   footer {
     margin-top: 0;
-    /* position: absolute;
-    top: 100%; */
+    grid-area: foot;
+  }
+  aside {
+    grid-area: img;
   }
 
   aside img {
