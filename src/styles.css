@@ -229,12 +229,19 @@ footer {
     background-size: cover;
     color: var(--Desaturated-Red);
     text-align: left;
+    overflow-x: hidden;
+    position: relative;
   }
-  .content-wrapper.hero {
+  .hero {
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-items: center;
     height: 100%;
+  }
+  footer {
+    margin-top: 0;
+    /* position: absolute;
+    top: 100%; */
   }
 
   aside img {
@@ -245,10 +252,5 @@ footer {
 
   .hidden {
     display: none;
-  }
-  footer {
-    margin-top: 0;
-    grid-column: 1;
-    grid-row: 1;
   }
 }
