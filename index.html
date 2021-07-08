@@ -34,58 +34,61 @@
     </style>
   </head>
   <body>
-   <div class="content-wrapper">
-    <header>
-      <figure class="logo">
-        <div class="logo-cont">
-          <img class="logo-img" src="images/logo.svg" alt="" />
+    <div class="content-wrapper">
+      <header>
+        <figure class="logo">
+          <div class="logo-cont">
+            <img class="logo-img" src="images/logo.svg" alt="" />
+          </div>
+          <div class="hero-img-cont">
+            <img class="hero-img-mobile" src="images/hero-mobile.jpg" alt="" />
+          </div>
+        </figure>
+
+        <div class="hero-content">
+          <main class="hero-section">
+            <h1 class="hero__h1">
+              We're <span class="big--black">coming</span>
+              <span class="big--black">soon</span>
+            </h1>
+            <p class="hero__p">
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+
+            <form class="form" id="form">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+              />
+              <button type="submit">
+                <img
+                  class="red-button btn"
+                  src="images/icon-arrow.svg"
+                  alt=""
+                />
+              </button>
+              <img class="error-icon" src="images/icon-error.svg" alt="" />
+              <small class="error-text">Please provide a valid email</small>
+            </form>
+          </main>
         </div>
-        <div class="hero-img-cont">
-          <img class="hero-img-mobile" src="images/hero-mobile.jpg" alt="" />
-        </div>
-      </figure>
-  
-      <div class="hero-content">
-        <main class="hero-section">
-          <h1 class="hero__h1">
-            We're <span class="big--black">coming</span>
-            <span class="big--black">soon</span>
-          </h1>
-          <p class="hero__p">
-            Hello fellow shoppers! We're currently building our new fashion store.
-            Add your email below to stay up-to-date with announcements and our
-            launch deals.
-          </p>
-    
-          <form class="form" id="form">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email Address"
-            />
-            <button type="submit">
-              <img class="red-button btn" src="images/icon-arrow.svg" alt="" />
-            </button>
-            <img class="error-icon" src="images/icon-error.svg" alt="" />
-            <small class="error-text">Please provide a valid email</small>
-          </form>
-        </main>
-      </div>
-     </header>
-     
-        <aside>
-          <img class="img-desktop" src="images/hero-desktop.jpg" alt="" />
-        </aside>
-        <footer>
-          <p class="attribution">
-            Challenge by
-            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-              >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
-          </p>
-        </footer>
-      </div>
-   </div>
+      </header>
+
+      <aside>
+        <img class="img-desktop" src="images/hero-desktop.jpg" alt="" />
+      </aside>
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>

@@ -97,6 +97,7 @@ select {
   );
   color: var(--Desaturated-Red);
   text-align: center;
+  min-height: 100vh;
 }
 .logo-cont {
   display: flex;
@@ -179,14 +180,7 @@ footer {
   display: none;
 }
 @media screen and (min-width: 600px) {
-  .logo-cont {
-    padding: 2rem 0;
-  }
-  main {
-    padding: 0rem;
-  }
   header {
-    /* padding: 0 3rem; */
     width: 70%;
     margin-left: -10rem;
   }
@@ -236,8 +230,6 @@ footer {
     color: var(--Desaturated-Red);
     text-align: left;
     position: relative;
-  }
-  .content-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr auto;
@@ -245,12 +237,13 @@ footer {
       "text img"
       "foot img";
     justify-items: center;
+    /* grid-row-gap: 5rem; */
   }
   .hero-content {
     grid-area: text;
   }
   footer {
-    margin-top: 0;
+    margin-top: initial;
     grid-area: foot;
     padding-top: 1rem;
   }
