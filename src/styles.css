@@ -97,7 +97,6 @@ select {
   );
   color: var(--Desaturated-Red);
   text-align: center;
-  min-height: 100vh;
 }
 .logo-cont {
   display: flex;
@@ -144,6 +143,7 @@ input {
   border: 1px solid green;
 }
 .fail {
+  border: 1px solid var(--Soft-Red);
 }
 input:focus {
   outline: none;
@@ -247,6 +247,8 @@ footer {
       "text img"
       "foot img";
     justify-items: center;
+    min-height: 100vh;
+
     /* grid-row-gap: 5rem; */
   }
   .hero-content {
