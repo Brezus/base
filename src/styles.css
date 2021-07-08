@@ -140,6 +140,11 @@ input {
   margin: 1.5rem auto 0;
   background-image: linear-gradient(var(--Gradient));
 }
+.success {
+  border: 1px solid green;
+}
+.fail {
+}
 input:focus {
   outline: none;
 }
@@ -157,6 +162,11 @@ input:focus {
   right: 5rem;
   width: 1.2rem;
   top: 2.3rem;
+}
+.error-text {
+  color: var(--Soft-Red);
+  position: relative;
+  left: 10px;
 }
 button {
   padding: 0.79rem 2rem;
