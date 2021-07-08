@@ -234,9 +234,10 @@ footer {
         hsla(0, 74%, 74%, 0.026)
       ),
       url(/images/bg-pattern-desktop.svg);
-    background-position: center;
+    background-position: left -20rem center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: multiply;
     color: var(--Desaturated-Red);
     text-align: left;
     position: relative;
