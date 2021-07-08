@@ -255,7 +255,7 @@ footer {
     grid-area: text;
   }
   footer {
-    margin-top: initial;
+    margin-top: 3rem;
     grid-area: foot;
     padding-top: 1rem;
   }
