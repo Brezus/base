@@ -97,6 +97,7 @@ select {
   );
   color: var(--Desaturated-Red);
   text-align: center;
+  min-height: 100vh;
 }
 .logo-cont {
   display: flex;
@@ -138,6 +139,12 @@ input {
   padding: 0.6rem 1.5rem;
   margin: 1.5rem auto 0;
   background-image: linear-gradient(var(--Gradient));
+}
+input[type="email"] {
+  padding: 0.6rem 5rem 0.6rem 2rem;
+}
+button {
+  border: 2px solid black;
 }
 .success {
   border: 1px solid green;
@@ -258,9 +265,6 @@ footer {
       "text img"
       "foot img";
     justify-items: center;
-    min-height: 100vh;
-
-    /* grid-row-gap: 5rem; */
   }
   .hero-content {
     grid-area: text;
