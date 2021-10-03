@@ -1,32 +1,27 @@
-const form = document.querySelector("#form");
-const email = document.getElementById("email");
-const errorIcon = document.querySelector(".error-icon");
-const errorText = document.querySelector(".error-text");
-const fail = document.getElementsByClassName("email");
+let form = document.querySelector("#form");
+let emailField = document.getElementById("email");
+let errorIcon = document.querySelector(".error-icon");
+let errorText = document.querySelector(".error-text");
+let submitBtn = document.getElementById("sub-btn");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+emailField.addEventListener("input", (e) => {
   checkInput();
+  e.preventDefault();
 });
 function checkInput() {
-  errorIcon.classList.add("hidden");
-  if (!email.value) {
+  let value = emailField.value;
+  let isValid = emailField.validity.valid;
+  if (!value) {
     errorIcon.classList.remove("hidden");
     errorText.classList.remove("hidden");
-    fail.classList.add(".fail");
-  }
-  if (!isEmail(email)) {
-    errorIcon.classList.remove("hidden");
-    errorText.classList.remove("hidden");
-  }
-  if (isEmail(email)) {
+  } else if (value && value.length > 5) {
     errorIcon.classList.add("hidden");
     errorText.classList.add("hidden");
+    if (emailField.validity.valid) {
+      return;
+    } else {
+      errorIcon.classList.remove("hidden");
+      errorText.classList.remove("hidden");
+    }
   }
-}
-
-function isEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
-  );
 }
